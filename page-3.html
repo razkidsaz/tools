@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+         function playOrPause() {
+             if (window.mp3.paused) {
+                 window.mp3.play();
+             } else {
+                 window.mp3.pause();
+             }
+         }
+        </script>
+
+        <style>
+         .imgbox{
+             text-align: center;
+             max-height: 600px;
+         }
+         .imgbox img{
+             max-height: 600px;
+             max-width: 900px;
+             vertical-align: middle;
+             outline: 1px solid gray;
+         }
+         .nav {
+             text-decoration: none;
+             color: black;
+             font-size: 24px;
+             padding: 100px 10px 100px 10px;
+             margin: 0 0px 0 0;
+             background:#e6e6e6;
+         }
+         .imgbtn .nav {
+             cursor: pointer;
+         }
+        </style>
+    </head>
+    <body>
+        <div class="imgbox">
+			      <a class="nav nav-prev" href="page-2.html" style="margin-left: 0px;">&lt;&lt;</a>
+            <a class="imgbtn" onclick="playOrPause();"> <img src="page-3.jpg"/></a>
+			      <a class="nav nav-next" href="page-4.html" style="margin-right: 0px;">&gt;&gt;</a>
+            <!-- <br/>
+            <br/>
+            <button id="playbtn" onclick="playOrPause();">Play/Pause</button> -->
+            <!-- <button>back to index</button>  -->
+        </div>
+
+        <!--button id="togglebtn" onclick="javascript:if(getCookie('autoplay')=='true'){setCookie('autoplay', 'false', 30);}else{setCookie('autoplay', 'true', 30);}">toggle autoplay</button-->
+
+
+        <audio id="mp3">
+            <source src="raz_whycanti_ld43_p3_text.mp3" type="audio/mp3">
+            Your browser does not support play audio.
+        </audio>
+    </body>
+</html>
