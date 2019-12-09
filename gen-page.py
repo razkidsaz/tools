@@ -7,7 +7,9 @@ def getPageIndex(name):
 
 # "raz_countingbugs.*_p6_text.mp3"
 def getAudioIndex(name):
-    left=name[:-9] # raz_countingbugs.*p6
+    left=name[:-4] # remove '.mp3'
+    if left.endswith('_text'):
+        left=left[:-5] # remove '_text'
     if left.endswith("title"):
         return 2
     p=left.rfind('p')
@@ -34,10 +36,9 @@ part1="""
              max-height: 600px;
          }
          .imgbox img{
-             max-height: 600px;
-             max-width: 900px;
              vertical-align: middle;
              outline: 1px solid gray;
+             width: 80%;
          }
          .nav {
              text-decoration: none;
